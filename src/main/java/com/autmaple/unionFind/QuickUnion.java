@@ -1,5 +1,8 @@
 package com.autmaple.unionFind;
 
+/**
+ * 快速连接并查集算法
+ */
 public class QuickUnion implements UnionFind{
     private final int[] ids;
     private int count;
