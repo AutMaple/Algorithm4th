@@ -40,7 +40,8 @@ public class SortUtilTest {
 
     @Test
     public void quickTest() {
-        Quick.sort(arr);
+//        Quick.sort(arr);
+        Quick.sort3Flag(this.arr, 0, this.arr.length - 1);
         SortUtil.show(arr);
     }
 }
