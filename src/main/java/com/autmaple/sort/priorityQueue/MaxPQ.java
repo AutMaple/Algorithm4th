@@ -1,7 +1,5 @@
 package com.autmaple.sort.priorityQueue;
 
-import com.autmaple.sort.SortUtil;
-
 @SuppressWarnings({"unchecked"})
 public class MaxPQ<Key extends Comparable<Key>> {
     private final Key[] pq;
@@ -36,7 +34,7 @@ public class MaxPQ<Key extends Comparable<Key>> {
      * 自底向上调整堆结构
      */
     public void swim(int k) {
-        while(k > 1 && SortUtil.less(k / 2, k)){
+        while (k > 1 && less(k / 2, k)) {
             exchange(k / 2, k);
             k /= 2;
         }
@@ -46,10 +44,10 @@ public class MaxPQ<Key extends Comparable<Key>> {
      * 自顶向下调整堆结构
      */
     public void sink(int k) {
-        while(k * 2 <= N) {
+        while (k * 2 <= N) {
             int j = 2 * k;
-            if(j < N  && less(j, j + 1)) j++;
-            if(less(j, k)) break;
+            if (j < N && less(j, j + 1)) j++;
+            if (less(j, k)) break;
             exchange(j, k);
             k = j;
         }
@@ -64,7 +62,7 @@ public class MaxPQ<Key extends Comparable<Key>> {
         pq[j] = temp;
     }
 
-    public boolean less(int i, int j){
+    public boolean less(int i, int j) {
         return pq[i].compareTo(pq[j]) < 0;
     }
 }

@@ -1,11 +1,16 @@
 package com.autmaple.sort.priorityQueue;
 
-public class IndexMinPQ <Item extends Comparable<Item>>{
-    public IndexMinPQ(int maxN) {
+@SuppressWarnings({"rawtypes"})
+public class IndexMinPQ<Item extends Comparable<Item>> {
+    private Comparable[] arr;
+    private int[] indexes;
 
+    public IndexMinPQ(int maxN) {
+        arr = new Comparable[maxN + 1];
+        indexes = new int[maxN + 1];
     }
 
-    void insert(int k, Item item){
+    void insert(int k, Item item) {
 
     }
 
