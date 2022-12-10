@@ -1,11 +1,13 @@
 package com.autmaple;
 
-import com.autmaple.sort.Insertion;
+import com.autmaple.sort.insertion.Insertion;
 import com.autmaple.sort.Merge;
 import com.autmaple.sort.Quick;
 import com.autmaple.sort.Selection;
 import com.autmaple.sort.Shell;
 import com.autmaple.sort.SortUtil;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
 import org.junit.Test;
 
 public class SortUtilTest {
@@ -43,6 +45,15 @@ public class SortUtilTest {
 //        Quick.sort(arr);
         Quick.sort3Flag(this.arr, 0, this.arr.length - 1);
         SortUtil.show(arr);
+    }
+
+    @Test
+    public void randomSequence() {
+        int n = 10;
+        for (int i = 0; i < n; i++) {
+            double x = StdRandom.uniformDouble(0.0, 1.0);
+            StdOut.println(x);
+        }
     }
 }
 

@@ -1,4 +1,6 @@
-package com.autmaple.sort;
+package com.autmaple.sort.insertion;
+
+import com.autmaple.sort.SortUtil;
 
 /**
  * 插入排序
